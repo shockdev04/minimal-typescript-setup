@@ -1,0 +1,29 @@
+{
+  "name": "minimal-typescript-setup",
+  "version": "1.0.0",
+  "description": "Minimal Typescript Setup",
+  "main": "./build/main.js",
+  "scripts": {
+    "start": "cd build && node main.js",
+    "watch": "npx tsc-watch --noClear -p ./tsconfig.json --onSuccess \"node ./build/main.js\"",
+    "build": "npx rimraf ./build/* && npx tsc && npm run start",
+    "lint": "eslint . --ext .ts"
+  },
+  "keywords": [
+    "minimal",
+    "typescript",
+    "setup",
+    "boilerplate"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.5.0",
+    "@typescript-eslint/parser": "^5.5.0",
+    "eslint": "^8.3.0",
+    "tsc-watch": "^4.5.0",
+    "typescript": "^4.5.2"
+  },
+  "dependencies": {
+    "@types/node": "^16.11.11"
+  }
+}
